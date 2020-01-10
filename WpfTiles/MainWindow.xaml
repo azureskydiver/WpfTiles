@@ -5,27 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTiles"
         mc:Ignorable="d"
-        Title="Color Swatches" Height="450" Width="800">
-    <ListBox ItemsSource="{Binding Colors}">
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Orientation="Vertical"
-                            Width="100"
-                            Margin="5">
-                    <Border Height="60">
-                        <TextBlock Text="{Binding Name}"
-                               FontSize="16"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               VerticalAlignment="Bottom"/>
-                    </Border>
-                    <Rectangle Fill="{Binding Brush}"
-                               Height="40"/>
-                    <TextBlock Text="{Binding HexValue}"
-                               FontSize="10"
-                               TextAlignment="Center"/>
-                </StackPanel>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+        Title="Color Swatches" Height="450" Width="810">
+    <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding Colors}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical"
+                                Width="100"
+                                Margin="5">
+                        <Border Height="60">
+                            <TextBlock Text="{Binding Name}"
+                                       FontSize="16"
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Center"
+                                       VerticalAlignment="Bottom"/>
+                        </Border>
+                        <Rectangle Fill="{Binding Brush}"
+                                   Height="40"/>
+                        <TextBlock Text="{Binding HexValue}"
+                                   FontSize="10"
+                                   TextAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
 </Window>
