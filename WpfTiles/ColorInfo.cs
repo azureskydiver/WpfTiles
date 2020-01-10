@@ -10,6 +10,8 @@ namespace WpfTiles
     {
         public string Name { get; }
         public Color Color { get; }
+        public string HexValue => Color.ToString();
+        public Brush Brush => new SolidColorBrush(Color);
 
         public ColorInfo(string name, Color color)
         {
