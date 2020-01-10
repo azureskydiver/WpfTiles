@@ -10,13 +10,12 @@
         <ItemsControl ItemsSource="{Binding Colors}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel />
+                    <WrapPanel ItemWidth="110"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical"
-                                Width="100"
                                 Margin="5">
                         <Border Height="60">
                             <TextBlock Text="{Binding Name}"
