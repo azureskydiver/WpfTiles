@@ -10,7 +10,7 @@
         <ItemsControl ItemsSource="{Binding Colors}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel ItemWidth="110"/>
+                    <WrapPanel IsItemsHost="True" ItemWidth="110"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
